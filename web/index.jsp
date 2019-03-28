@@ -14,41 +14,45 @@
 </head>
 <body>
 <form hidden="hidden" id="fAction" action="/controller">
-    <input type="hidden" name="command" value="action">
+    <input type="hidden" name="command" value="calculate">
 </form>
 
 <form hidden="hidden" id="fNumbs" action="/controller">
-    <input type="hidden" name="command" value="number">
+    <input type="hidden" name="command" value="calculate">
 </form>
-<table align="center" valign="middle" >
-    <tr><td colspan="5"><jsp:text>Калькулятор</jsp:text></td></tr>
+<table align="center" valign="middle">
     <tr>
-        <td colspan="5"><input type="text" value="${requestScope.rez}"></td>
+        <td colspan="5">
+            <jsp:text>Калькулятор</jsp:text>
+        </td>
     </tr>
     <tr>
-        <td><input type="submit"  name="one" value="1" form="fNumbs"></td>
-        <td><input type="button" value="2"></td>
-        <td><input type="button" value="3"></td>
-        <td><input type="button" value="+"></td>
+        <td colspan="5"><input type="number" value="${requestScope.rez}"></td>
+    </tr>
+    <tr>
+        <td><input type="submit" name="number" value="1" form="fNumbs"></td>
+        <td><input type="submit" name="number" value="2" form="fNumbs"></td>
+        <td><input type="submit" name="number" value="3" form="fNumbs"></td>
+        <td><input type="submit" name="act" value="+" form="fAction"></td>
         <td><input type="submit" name="act" value="-" form="fAction"></td>
     </tr>
     <tr>
-        <td><input type="button" value="4"></td>
-        <td><input type="button" value="5"></td>
-        <td><input type="button" value="6"></td>
-        <td><input type="button" value="*"></td>
-        <td><input type="button" value="/"></td>
+        <td><input type="submit" name="number" value="4" form="fNumbs"></td>
+        <td><input type="submit" name="number" value="5" form="fNumbs"></td>
+        <td><input type="submit" name="number" value="6" form="fNumbs"></td>
+        <td><input type="submit" name="act" value="*" form="fAction"></td>
+        <td><input type="submit" name="act" value="/" form="fAction"></td>
     </tr>
     <tr>
-        <td><input type="button" value="7"></td>
-        <td><input type="button" value="8"></td>
-        <td><input type="button" value="9"></td>
-        <td><input type="button" value="%"></td>
-        <td><input type="button" value="√"></td>
+        <td><input type="submit" name="number" value="7" form="fNumbs"></td>
+        <td><input type="submit" name="number" value="8" form="fNumbs"></td>
+        <td><input type="submit" name="number" value="9" form="fNumbs"></td>
+        <td><input type="submit" name="act" value="%" form="fAction"></td>
+        <td><input type="submit" name="act" value="√" form="fAction"></td>
     </tr>
     <tr>
-        <td><input type="button" value="0"></td>
-        <td colspan="4"><input type="button" value="="></td>
+        <td><input type="submit" name="number" value="0" form="fNumbs"></td>
+        <td><input type="submit" name="act" value="=" form="fAction"></td>
     </tr>
     <tr>Hello</tr>
 </table>
